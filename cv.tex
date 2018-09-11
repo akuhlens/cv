@@ -1,13 +1,16 @@
-%% TODO find place to add OPLSS
-%% TODO find place to add DeepSpec
-\documentclass[margin,line]{res}
+\documentclass[resmargin,line]{res}
 \usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{color}
+\usepackage[top=0.75in,bottom=0.75in,
+            right=0.5in,left=0.5in]{geometry}
 
-\oddsidemargin -.5in
-\evensidemargin -.5in
 \textwidth=6.0in
+\sectionskip=5mm
+
 \itemsep=0in
 \parsep=0in
+
 % if using pdflatex:
 %\setlength{\pdfpagewidth}{\paperwidth}
 %\setlength{\pdfpageheight}{\paperheight} 
@@ -27,6 +30,8 @@
       \setlength{\leftmargin}{0.2in}}}{\end{list}}
 
 
+\setlist[itemize]{noitemsep,topsep=0pt}
+
 \begin{document}
 
 \name{Andre Kuhlenschmidt}
@@ -35,72 +40,89 @@
 \section{\sc Contact Information}
 \vspace{.05in}
 \begin{tabular}{@{}p{2in}p{4in}}
-Lindley Hall 215           & {\it E-mail:} akuhlens@iu.edu \\
+Luddy Hall                 & {\it E-mail:} akuhlens@iu.edu \\
 Indiana University         & {\it Phone:}  (812) 325-7906 \\
-150 S. Woodlawn Ave.       & {\it Github:} github.com/akuhlens  \\       
-Bloomington, IN 47405      & {\it WWW:} akuhlens.github.io \\     
+700 N. Woodlawn Ave.       & {\it Github:} github.com/akuhlens  \\       
+Bloomington, IN 47408      & {\it WWW:} akuhlens.github.io \\     
 \end{tabular}
 
 \section{\sc Research Interests}
-My research involves developing techniques that improve both the
-process of producing software and the quality of the software
-produced. My most recent work focuses on gradual typing based
-techniques that enable developers to more efficiently develop robust
-software by giving them the flexibility to benefit from both static
-and dynamic typing.
+I am interested in designing and building compilers, runtime systems,
+and type systems that make it easier to produce quality software.  My
+most recent work focuses on the implementation of type systems that
+provide the benefits from both static and dynamic typing (i.e. gradual
+typing) while minimizing overhead.
 
-\section{\sc Skills}
-
-\begin{description}
-\item[Skills] Research in programming language theory and implementation.
-\item[Languages] Racket/Scheme, C, Haskell, Java, Python, Coq, Agda, C++
-\item[Platforms] Linux and Embedded ARM
-\end{description}
 \section{\sc Education}
-{\bf Indiana University}, Bloomington, Indiana USA\\
-\vspace*{-.1in}
+{\bf Indiana University},
+Bloomington, Indiana USA\\
+\vspace*{-.15in}
 \begin{list1}
-\item[] Ph.D. Candidate, Computer Science, Ongoing
-\begin{list2}
-\item[] Advisor:  Jeremy Siek
-\end{list2}
-\vspace*{.05in}
-\item[] M.S., Computer Science,  May 2016
+\item[] {\em Ph.D. Candidate}, Computer Science, \hfill {\bf May 2020}\\
+  \vspace*{-.15in}
+  \begin{list2}
+  \item[] Advisor:  Jeremy Siek
+  \end{list2}
+\item[] {\em M.S.}, Computer Science,  \hfill {\bf May 2016}
+\item[] {\em B.S.}, Business, Major: Entrepreneurship, \hfill{} {\bf May 2010}
 \end{list1}
 
-{\bf Kelley School of Business, Indiana University}, Bloomington, Indiana USA\\
-\vspace*{-.1in}
-\begin{list1}
-\item[] B.S., Business, May 2010
-\end{list1}
+%% {\bf Indiana University, Kelley School of Business}, Bloomington, Indiana USA\\
+%% \vspace*{-.15in}
+%% \begin{list1}
 
-\section{\sc Academic Experience}
+%% \end{list1}
+
+\section{\sc Experience}
 {\bf Indiana University}, Bloomington, Indiana USA\\
-{\em Graduate Research Assistant to Jeremy Siek} \hfill {\bf January 2014 -- Present}\\
+{\em Graduate Research Assistant} \hfill {\bf January 2014 -- Present}\\
 %
-Evaluating implementation techniques for programming
-languages that soundly mix static and dynamic typing (gradual typing)
-in the context of ahead-of-time compilation, and developing formal
-semantics for gradual programming languages and their implementation.
+\begin{itemize}
+\vspace*{-.3cm}
+\item Evaluate implementation techniques for sound gradually typed
+  programming languages.
+\item Develop an ahead of time compiler Grift.
+\item Measure performance improvements in compiler via benchmark experiments.
+\item Design semantics that facilitate safety and efficiency.
+\end{itemize}
 
-{\em Teaching Assistant} \hfill {\bf January 2016 -- Present}\\
+{\bf Indiana University}, Bloomington, Indiana USA\\
+{\em Assistant Instructor} \hfill {\bf January 2016 -- May 2018}\\
+{\color{white} . } \quad \hfill {\bf August 2012 -- May 2014}\\
 %
-Assisted in the instruction of courses teaching programming
-implementation, embedded programming, and operating
-systems. Responsibilities include teaching lab sections of 5-30
-students, creating assignments, and developing course software.
+\begin{itemize}
+\vspace*{-.35cm}
+\item Planned and constructed course materials and software for
+  courses in programming language semantics and implementation,
+  operating systems, and embedded systems.
+\item Instructed labs sessions of 5-30 students.
+\item Recognized as Assistant Instructor of the Year in 2018.
+\end{itemize}
+%
+%% Assisted in the instruction of courses teaching programming
+%% language implementation, embedded programming, and operating
+%% systems. Responsibilities include teaching lab sections of 5-30
+%% students, creating assignments, and developing course software.
 
-\section{\sc Conference Papers}
+%\section{\sc Conference Papers}
 
 %% Work in progress
-{\bf Efficient Gradual Typing}.
-%
-Andre Kuhlenschmidt, Deyaaeldeen Almahallawi, Jeremy G. Siek.
-%
-Conference on Programming Language Design and Implementation.
-{\bf (In Submission)}
+%% {\bf Efficient Gradual Typing}.
+%% %
+%% Andre Kuhlenschmidt, Deyaaeldeen Almahallawi, Jeremy G. Siek.
+%% %
+%% Conference on Programming Language Design and Implementation.
+%% {\bf (In Submission)}
+
+\section{\sc Skills}
+{\bf Languages:} Racket, C, Haskell, Java, Python, Coq, C++\\
+{\bf Tools and Platforms:} Bash, Git, Make, Linux, Mac OS, Chibi OS, ARM
 
 \section{\sc Workshop \, Papers}
+
+{\bf An Efficient Compiler for the Gradually Typed Lambda Calculus}
+Andre Kuhlenschmidt, Deyaaeldeen Almahallawi, Jeremy G. Siek.
+In Scheme and Functional Programming Workshop, 2018.
 
 {\bf A Systematic Performance Evaluation of Gradually Typed Functions
   and References}.
@@ -117,12 +139,25 @@ In Scripts to Programs Workshop, STOP, 2015.
 
 \section{\sc Open Source Projects}
 
-{\bf Grift} \hfill {\bf 2014 -- present}\\
-%
-An ahead-of-time compiler for comparing implementations of gradual
-typing.\\
-%
-\url{github.com/Gradual-Typing/Grift/}.
+{\bf \href{github.com/Gradual-Typing/Grift/}{Grift}}
+\hfill {\bf May 2014 -- Present}\\
+\vspace*{-.35cm}
+\begin{itemize}
+  %% \item An ahead-of-time compiler for comparing implementation
+  %%   techniques of gradual typing.
+\item Lead developer of an optimizing compiler for a gradually typed Lisp to
+  native code.
+\item Utilizes {\em space-efficient coercions} to enforce
+  soundness of the static type system.
+\end{itemize}
+
+
+\section{\sc Professional Activities}
+
+IU SICE Graduate Education Committee, Student Representative
+\hfill Spring -- Fall 2018\\
+OOPSLA Artifact Evaluation Committee \hfill August 2018\\
+SPLASH Student Research Competition Program Committee \hfill August 2018\\
 
 \end{resume}
 \end{document}
